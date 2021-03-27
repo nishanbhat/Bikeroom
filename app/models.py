@@ -46,8 +46,7 @@ class Product(models.Model):
         return str(self.id)
 
 
-class Cart (models.Model):
-
+class Cart(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
@@ -68,7 +67,7 @@ STATUS_CHOICES = (
 
 class Orderplaced(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    Customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
     ordered_date = models.DateTimeField(auto_now_add=True)

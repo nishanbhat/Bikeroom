@@ -40,7 +40,7 @@ class Product(models.Model):
     discounted_price = models.FloatField()
     description = models.TextField()
     brand = models.CharField(max_length=100)
-    product_image = models.ImageField(upload_to='producting')
+    product_image = models.ImageField(upload_to='productimg')
 
     def __str__(self):
         return str(self.id)

@@ -1,0 +1,48 @@
+{% extends 'admins/Layout_admin.html' %}
+{% block title %}
+<title>All Users</title>
+{% endblock%}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-10 offset-md-1">
+            <h1 class="text-center">All Users</h1>
+            <a href="/admins-dashboard/bikes/new" class="btn btn-primary">Add New Product</a>
+            <div class="card py-2 px-2">
+                <table class="table-striped">
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Bike Categories</th>
+                        <th>Actions</th>
+
+                    </tr>
+                    {% for bike in bikes %}
+                    <tr>
+                        <td> {{ bike.name }}</td>
+                        <td> {{ bike.price }}</td>
+                        <td> {{ bike.bike_categories }}</td>
+
+
+                        <td>
+                           <a href="/admins-dashboard/bikes/{{bike.id}}/update"
+                               class="btn btn-primary btn-sm">
+                            Update</a>
+                      
+                            <a href="/admins-dashboard/bikes/{{bike.id}}/delete"
+                            class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to update this user?')"> 
+                         Delete</a>
+                        </td>
+
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

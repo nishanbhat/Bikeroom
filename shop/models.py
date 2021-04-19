@@ -3,19 +3,20 @@ from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 from django.forms import ModelForm
 
+
 # Create your models here.
 
 
 class Bikes(models.Model):
-    name = models.CharField(max_length=35, default="Shimano")
-    size = models.CharField(max_length=2, default=26)
-    color = models.CharField(max_length=10, default="Blu")
-    description = models.TextField(default="bicklete")
+    name = models.CharField(max_length=35)
+    size = models.CharField(max_length=2)
+    color = models.CharField(max_length=10)
+    description = models.TextField(default="Bicycle")
     full_description = RichTextField(blank=True, null=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=100)
-    image = models.ImageField(default="defalut.png")
-    age_category = models.CharField(default=16, max_length=15)
-    bike_categories = models.CharField(default="BMX", max_length=50)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    image = models.ImageField()
+    age_category = models.CharField(default=12, max_length=15)
+    bike_categories = models.CharField(max_length=50)
     amount = models.DecimalField(max_digits=10, decimal_places=2, default=10)
 
     def __str__(self):

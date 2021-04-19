@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -12,5 +12,6 @@ urlpatterns = [
     path('deletefromcart/<int:id>', views.deletefromcart, name='deletefromcart'),
     path('shopcart/', views.shopcart, name='shopcart'),
     path('orderproduct/', views.orderproduct, name='orderproduct'),
+    path('admins-dashboard/', include('admins.urls'))
 
 ]

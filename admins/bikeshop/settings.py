@@ -39,9 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'rest_framework',
-    'rest_framework.authtoken',
+    'rest_framework.authtoken'
     'admins',
-    'bootstrapform'
 ]
 
 REST_FRAMEWORK = {

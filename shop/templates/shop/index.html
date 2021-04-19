@@ -80,7 +80,7 @@
     <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3">
         {%for bike in kid_bikes%}
             <div class="col mb-4 bike">
-                <a href="/bike/{{ bike.name }}" class="text-decoration-none">
+                <a href="/bike/{{ bike.id }}" class="text-decoration-none">
                     <div class="card h-100 shadow-sm">
                         <img src="{{bike.image.url}}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -106,7 +106,7 @@
     <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3">
         {%for bike in BMX_bikes%}
             <div class="col mb-4 bike">
-                <a href="/bike/{{ bike.name }}" class="text-decoration-none">
+                <a href="/bike/{{ bike.id }}" class="text-decoration-none">
                     <div class="card h-100 shadow-sm">
                         <img src="{{bike.image.url}}" class="card-img-top" alt="...">
                         <div class="card-body">

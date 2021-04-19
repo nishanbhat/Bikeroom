@@ -43,9 +43,9 @@ def index(request):
     return render(request, 'shop/index.html', context)
 
 
-def details(request, name):
-    print(name)
-    selected_bike = Bikes.objects.get(name=name)
+def details(request, id):
+    print(id)
+    selected_bike = Bikes.objects.get(id=id)
     images = Images.objects.filter(bike_id=selected_bike.id)
     show_bike = {'bike': selected_bike, 'images': images}
     return render(request, 'shop/details.html', show_bike)

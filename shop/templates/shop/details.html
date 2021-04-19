@@ -45,7 +45,7 @@
             <!-- Breadcrumbs -->
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb bg-transparent pl-0 mb-0">
-                <li class="breadcrumb-item"><a href="/search?size={{ bike.size }}">Madhesia:{{bike.size}}</a></li>
+                <li class="breadcrumb-item"><a href="/search?size={{ bike.size }}">Size:{{bike.size}}</a></li>
                 <li class="breadcrumb-item"><a href="/category/{{ bike.bike_categories }}">{{ bike.bike_categories }}</a></li>
                 <li class="breadcrumb-item active" aria-current="page">{{ bike.name }}</li>
               </ol>
@@ -53,11 +53,11 @@
         </div>
         <div class="col-md-5 order-md-2">
             <h1 class="display-4 text-capitalize">{{bike.name}} <span class="badge badge-secondary">{{bike.price}} &euro;</span></h1>
-            <small class="text-muted">Madhesia :{{bike.size}}</small>
+            <small class="text-muted">Size:{{bike.size}}</small>
             <p>
                 <!-- short description -->
                 {{bike.description}},
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eaque eligendi molestiae? Autem deleniti dicta dolorum fuga, nam nostrum odit officiis optio perferendis placeat quae quisquam repellendus.
+                Bicycle, two-wheeled steerable machine that is pedaled by the rider's feet. On a standard bicycle the wheels are mounted in-line in a metal frame, with the front wheel held in a rotatable fork. The rider sits on a saddle and steers by leaning and turning handlebars that are attached to the fork.
             </p>
             <div class="row">
                 <div class="col-md-12">

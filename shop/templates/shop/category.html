@@ -14,13 +14,13 @@
                 <div class="col-lg-10 col-md-12 mx-auto">
                 {% if bikes|length > 0 %}
                     <h1 class="display-3 text-white font-weight-bold text-uppercase">{{ category_name }}</h1>
-                    <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur eos odio.</p>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eveniet fugit laborum nisi numquam. Ab ad in ipsa necessitatibus nihil pariatur repudiandae!</p>
+                    <p class="lead text-white">Ride as much or as little, as long or as short as you feel. But ride.</p>
+                    <p class="lead text-white">It never gets easier, you just get faster.</p>
                     <hr class="my-4 border-top border-success">
                     <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
                 {% else %}
                     <h1 class="display-3 text-warning text-uppercase">No bikes for this category!</h1>
-                    <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur eos odio.</p>
+                    <p class="lead text-white">You are one ride away from a good mood</p>
                     <a class="btn btn-info btn-lg" href="/search?q={{ category_name }}" role="button">Search here</a>
                 {% endif %}
                 </div>
@@ -33,7 +33,7 @@
     <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3">
         {%for bike in bikes%}
             <div class="col mb-4 bike">
-                <a href="/bike/{{ bike.name }}" class="text-decoration-none">
+                <a href="/bike/{{ bike.id }}" class="text-decoration-none">
                     <div class="card h-100 shadow-sm">
                         <img src="{{bike.image.url}}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -41,7 +41,7 @@
                             <p class="card-text text-truncate">{{bike.description}}</p>
                             <div class="d-flex align-items-center justify-content-between mt-1">
                                 <span class="product-price">{{bike.price}} &euro;</span>
-                                <small class="text-muted">Madhesia :{{bike.size}}</small>
+                                <small class="text-muted">Size :{{bike.size}}</small>
                             </div>
                         </div>
                     </div>

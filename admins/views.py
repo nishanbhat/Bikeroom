@@ -95,12 +95,12 @@ def delete_bike(request, id):
 @admin_only
 def addBike(request):
     if request.method == "POST":
-        form = AddBikes(request.POST)
+        form = AddBikes(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.add_message(request, messages.SUCCESS,
                                  'Bike added Successfully')
-            return redirect('/admin-dashboard/bikes')
+            return redirect('/admins-dashboard/bikes')
         else:
             messages.add_message(request, messages.ERROR,
                                  'Please provide correct details')

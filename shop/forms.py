@@ -18,8 +18,9 @@ class HomeSearchForm(forms.Form):
 
 
 class SearchForm(forms.Form):
-    choices_category = [('', 'Kategori'), ('1-BMX', 'BMX'), ('2-MTB', 'MTB')]
-    choices_size = [('', 'Madhesi'), ('12', '12'), ('14', '14'),
+    choices_category = [('', 'Category'), ('1-BMX', 'BMX'),
+                        ('2-MTB', 'MTB'), ('3-Shimano', 'Shimano')]
+    choices_size = [('', 'Size'), ('12', '12'), ('14', '14'),
                     ('16', '16'), ('20', '20'), ('26', '26')]
 
     query = forms.CharField(max_length=100, widget=forms.TextInput(

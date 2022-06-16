@@ -89,18 +89,23 @@ WSGI_APPLICATION = 'bikeshop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'Bikeroom',
+#         'USER': 'root',
+#         'PASSWORD': 'workbench',
+#         'PORT': 3306,
+#         'HOST': '127.0.0.1',
+#         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Bikeroom',
-        'USER': 'root',
-        'PASSWORD': 'workbench',
-        'PORT': 3306,
-        'HOST': '127.0.0.1',
-        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

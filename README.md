@@ -1,6 +1,10 @@
 # Bikeroom
 An ecommerce site for bicycle shop that allows the user(customer) to visit the site and browse through all of the latest and featured bicycles, search and filter the  bikes by models along with categories, and make some inquiries about bicycles.
 
+admin credentials:
+username--admin
+pw--admin
+
 # Followings are the UI screenshot of this website.
 
 ![Screenshot (175)](https://user-images.githubusercontent.com/57608125/176462818-354cfc3c-63aa-4b65-bb38-d3bd1db4263f.png)
